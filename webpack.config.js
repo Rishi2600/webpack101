@@ -4,7 +4,7 @@ module.exports = {
         rules: [
             {
                 test: /\.svg$/,
-                loader: 'svg-inline-loader'
+                use: 'svg-inline-loader'
             },
             {
                 test: /\.css$/i,
