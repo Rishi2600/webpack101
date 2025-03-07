@@ -1,5 +1,5 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -15,8 +15,8 @@ module.exports = {
       },
       {
         test: /\.(js)$/,
-        use: "babel-loader"
-      }
+        use: "babel-loader",
+      },
     ],
   },
   output: {
@@ -24,4 +24,5 @@ module.exports = {
     filename: "bundle.js",
   },
   plugins: [new HtmlWebpackPlugin()],
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
 };
